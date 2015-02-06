@@ -6,20 +6,6 @@ This project uses Ember for the front-end and Rails for the back-end, so these n
 
 # inv-ember
 
-<h3>Bower Configuration</h3>
-
-The Bower configuration file, bower.json, is located at the root of your Ember CLI project, and lists the dependencies for your project. Changes to your dependencies should be managed through this file, rather than manually installing packages individually.
-
-Executing ember install:bower will install all of the dependencies listed in bower.json in one step.
-
-Ember CLI is configured to have git ignore your bower_components directory by default. Using the Bower configuration file allows collaborators to fork your repo and get their dependencies installed locally by executing ember install:bower themselves.
-
-Ember CLI watches bower.json for changes. Thus it reloads your app if you install new dependencies via ember install:bower <dependencies>.
-
-<hr>
-
-<h3>Ember Addons used in this Project</h3> 
-
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -29,6 +15,16 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+
+<h3>Ember Addons used in this Project</h3>
+
+Note: these are specified cli and bower dependencies (package.json and bower.json) and will be installed when running `npm install` and `Bower Install`. Links are for information purpose only.
+
+* [Bootstrap-Sass](https://www.npmjs.com/package/ember-cli-bootstrap-sass)
+* [Font-Awesome](https://www.npmjs.com/package/ember-cli-font-awesome)
+* [Ember-Forms](https://github.com/indexiatech/ember-forms)
+* [Ember-Validations](https://www.npmjs.com/package/ember-cli-ember-validations)
+* [Liquid-Fire](https://github.com/ef4/liquid-fire)
 
 ## Installation
 
