@@ -1,10 +1,10 @@
 # Invoice Presto
 
-This project uses Ember for the front-end and Rails for the back-end, so these notes are split into these two areas.  The Ember notes include those supplied by the Ember-cli team in the standard template build.
+This project uses Ember for the front-end and Rails for the back-end, hence the project is split into these two directories.  The Ember notes include those supplied by the Ember-cli team in the standard template build.
 
 <hr>
 
-# inv-ember
+# inv-ember directory
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ You will need the following things properly installed on your computer.
 
 <h3>Ember Addons used in this Project</h3>
 
-Note: these are specified cli and bower dependencies (package.json and bower.json) and will be installed when running `npm install` and `Bower Install`. Links are for information purpose only.
+Note: these are specified cli and bower dependencies (package.json and bower.json) and will be installed when running `npm install` and `bower install`. Links are for information purpose only.
 
 * [Bootstrap-Sass](https://www.npmjs.com/package/ember-cli-bootstrap-sass)
 * [Font-Awesome](https://www.npmjs.com/package/ember-cli-font-awesome)
