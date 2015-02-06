@@ -1,12 +1,24 @@
 # Invoice Presto
 
+This project uses Ember for the front-end and Rails for the back-end, so these notes are split into these two areas.  The Ember notes include those suppiled by the Ember-cli team in the standard template build.
 
-
+<hr>
 
 # Inv-ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+<h3>Bower Configuration</h3>
+
+The Bower configuration file, bower.json, is located at the root of your Ember CLI project, and lists the dependencies for your project. Changes to your dependencies should be managed through this file, rather than manually installing packages individually.
+
+Executing ember install:bower will install all of the dependencies listed in bower.json in one step.
+
+Ember CLI is configured to have git ignore your bower_components directory by default. Using the Bower configuration file allows collaborators to fork your repo and get their dependencies installed locally by executing ember install:bower themselves.
+
+Ember CLI watches bower.json for changes. Thus it reloads your app if you install new dependencies via ember install:bower <dependencies>.
+
+<hr>
+
+<h3>Ember AddOns used in this Project</h3> 
 
 ## Prerequisites
 
