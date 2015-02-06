@@ -1,10 +1,10 @@
 # Invoice Presto
 
-This project uses Ember for the front-end and Rails for the back-end, so these notes are split into these two areas.  The Ember notes include those suppiled by the Ember-cli team in the standard template build.
+This project uses Ember for the front-end and Rails for the back-end, so these notes are split into these two areas.  The Ember notes include those supplied by the Ember-cli team in the standard template build.
 
 <hr>
 
-# Inv-ember
+# inv-ember
 
 <h3>Bower Configuration</h3>
 
@@ -18,7 +18,7 @@ Ember CLI watches bower.json for changes. Thus it reloads your app if you instal
 
 <hr>
 
-<h3>Ember AddOns used in this Project</h3> 
+<h3>Ember Addons used in this Project</h3> 
 
 ## Prerequisites
 
