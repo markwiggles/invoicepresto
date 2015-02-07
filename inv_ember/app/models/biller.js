@@ -28,23 +28,25 @@ biller.reopen({
     }
 });
 
+// billers: {}
+// biller: {}
 
 //TEST DATA
 
-biller.reopenClass({
+// biller.reopenClass({
 
-    FIXTURES: [{
-        id: 1,
-        name: 'Mark',
-        email: 'markwigg@live.com',
-        phone: '0433 044170'
-    }, {
-        id: 2,
-        name: 'Fred',
-        email: 'freddie@live.com',
-        phone: '0499 99999'
-    }]
-});
+//     FIXTURES: [{
+//         id: 1,
+//         name: 'Mark',
+//         email: 'markwigg@live.com',
+//         phone: '0433 044170'
+//     }, {
+//         id: 2,
+//         name: 'Fred',
+//         email: 'freddie@live.com',
+//         phone: '0499 99999'
+//     }]
+// });
 
 
 

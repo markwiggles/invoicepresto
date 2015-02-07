@@ -69,6 +69,7 @@ GEM
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
+    rack-cors (0.3.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
@@ -129,6 +130,7 @@ DEPENDENCIES
   active_model_serializers (= 0.8.3)
   byebug
   quiet_assets
+  rack-cors
   rails (= 4.2.0)
   spring
   sqlite3
