@@ -1,3 +1,27 @@
 <div class="subjects">
     <h3>Billers</h3>
+    <hr>
+
+    {{#em-form model=model}}
+        {{em-input property="name" placeholder="enter a name..."}} {{em-input property="email" placeholder="email"}} {{em-input property="phone" placeholder="phone"}}
+    {{/em-form}}
+
+
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+        </thead>
+        {{#each item in model}}
+            <tr>
+                <td width=50%>
+                    {{item.name}}
+                </td>
+                <td width=50%>
+                    {{item.email}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
 </div>

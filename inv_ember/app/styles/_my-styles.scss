@@ -1,18 +1,32 @@
-
 .subjects {
-	width: 400px;
-	height: 500px;
-	padding: 25px;
-	text-align: center;
-	background-color: lighten(grey, 40%);
-	border-radius: 10px;
-}
+    width: 500px;
+    height: 500px;
 
+    padding: 25px;
+    text-align: center;
+    background-color: lighten(grey, 40%);
+    border-radius: 10px;
+    hr {
+        border-top: 1px solid white;
+    }
+
+    td, th {
+        text-align: left;
+    }
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+    table {
+        width: 80%;
+        margin: 40px auto;
+    }
+
+}
 #page-content-wrapper {
-	width: 800px;
-	height: 800px;
+    width: 800px;
+    height: 800px;
 }
-
 .sidebar-nav li {
-	font-size: 1.2em;
+    font-size: 1.4em;
 }
