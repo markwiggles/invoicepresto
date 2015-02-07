@@ -6,10 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
     this.resource('billers', function() {
-        this.route('show', {
+        this.route('create');
+        this.route('edit', {
             path: ':biller_id'
-        })
+        });
     });
 
     this.resource('debtors');

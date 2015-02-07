@@ -1,15 +1,35 @@
-import DS from 'ember-data';
+                                                                                                                                                                         import DS from 'ember-data';
 
-var biller = DS.Model.extend({
+import EmberValidations from 'ember-validations';
 
-    name: DS.attr('string', {
-        defaultValue: 'Mark'
-    }),
+var biller = DS.Model.extend(EmberValidations.Mixin, {
+
+    name: DS.attr('string'),
     email: DS.attr('string'),
-    phone: DS.attr('string')
+    phone: DS.attr('string'),
 
+    isntValid: Ember.computed.not('isValid')
 });
 
+// VALIDATIONS
+
+biller.reopen({
+    validations: {
+
+        name: {
+            presence: true,
+            length: {
+                minimum: 3
+            }
+        },
+        email: {
+            presence: true
+        }
+    }
+});
+
+
+//TEST DATA
 
 biller.reopenClass({
 
@@ -25,6 +45,7 @@ biller.reopenClass({
         phone: '0499 99999'
     }]
 });
+
 
 
 export default biller;

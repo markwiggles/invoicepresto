@@ -1,7 +1,7 @@
 export default function() {
     this.transition(
         this.fromRoute('index'),
-        this.toRoute('billers'),
+        this.toRoute('billers.index'),
         this.use('toLeft', {
             duration: 500
         }),
@@ -10,7 +10,7 @@ export default function() {
         })
     );
     this.transition(
-        this.fromRoute('billers'),
+        this.fromRoute('billers.index'),
         this.toRoute('debtors'),
         this.use('toLeft', {
             duration: 500

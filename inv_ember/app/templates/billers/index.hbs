@@ -1,0 +1,37 @@
+<div class="subjects">
+    <h3>Billers</h3>
+    <hr>
+
+    <div class="row">
+
+    {{#link-to 'billers.create'}}
+    <button class="btn btn-primary">Add New</button>
+    {{/link-to}}
+    </div>
+
+    <div class="row">
+
+    <table class="table">
+        <thead>
+            <th width=45%>Name</th>
+            <th width=45%>Email</th>
+            <th width=10%></th>
+        </thead>
+        {{#each item in model}}                                                   
+            <tr>
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.email}}
+                </td>
+                <td>
+                    {{#link-to 'billers.edit'}}{{fa-icon "edit"}}{{/link-to}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    </div>
+
+</div>

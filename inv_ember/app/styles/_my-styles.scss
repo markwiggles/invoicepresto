@@ -1,7 +1,6 @@
 .subjects {
     width: 500px;
     height: 500px;
-
     padding: 25px;
     text-align: center;
     background-color: lighten(grey, 40%);
@@ -9,19 +8,31 @@
     hr {
         border-top: 1px solid white;
     }
-
     td, th {
         text-align: left;
+        padding: 10px;
     }
     form {
         width: 70%;
         margin: 0 auto;
+
+        .form-group {
+            position: relative;
+            padding-bottom: 15px;
+            .help-block {
+                position: absolute;
+                left: 10px;
+            }
+        }
     }
+
+
+
     table {
         width: 80%;
         margin: 40px auto;
+        border: 1px solid white;
     }
-
 }
 #page-content-wrapper {
     width: 800px;
