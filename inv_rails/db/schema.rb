@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20150207104428) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "selected",   default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

@@ -1,6 +1,6 @@
 .subjects {
     width: 500px;
-    height: 500px;
+    min-height: 500px;
     padding: 25px;
     text-align: center;
     background-color: lighten(grey, 40%);
@@ -15,7 +15,6 @@
     form {
         width: 70%;
         margin: 0 auto;
-
         .form-group {
             position: relative;
             padding-bottom: 15px;
@@ -25,9 +24,6 @@
             }
         }
     }
-
-
-
     table {
         width: 80%;
         margin: 40px auto;
@@ -36,8 +32,43 @@
 }
 #page-content-wrapper {
     width: 800px;
-    height: 800px;
+    min-height: 800px;
 }
 .sidebar-nav li {
     font-size: 1.4em;
+    .icon {
+        width: 30px;
+    }
+    .link {
+        width: 100px;
+        margin-left: 20px;
+    }
 }
+
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width   : 28px;
+  margin  : 0;
+  padding : 0;
+  opacity : 0;
+}
+
+input[type=checkbox]:not(old) + label,
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -28px;
+  padding-left : 28px;
+  background   : url('checks1.png') no-repeat 0 0;
+  line-height  : 24px;
+}
+
+input[type=checkbox]:not(old):checked + label{
+  background-position : 0 -24px;
+}
+
+input[type=radio]:not(old):checked + label{
+  background-position : 0 -48px;
+}
+
+
+

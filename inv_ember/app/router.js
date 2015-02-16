@@ -6,19 +6,51 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('billers', function() {
+      this.route('create');
+      this.route('edit', {
+          path: ':id'
+      });
+  });
 
-    this.resource('billers', function() {
-        this.route('create');
-        this.route('edit', {
-            path: ':biller_id'
-        });
-    });
+  this.route("debtors", function() {
+      this.route("create");
+      this.route("edit", {
+          path: ':id'
+      });
+  });
 
-    this.resource('debtors');
-    this.resource('items');
-    this.resource('tax');
-    this.resource('freight');
-    this.resource('bank-details');
+  this.route("items", function() {
+      this.route("create");
+      this.route("edit", {
+          path: ':id'
+      });
+  });
+
+  this.route("bank-details", function() {
+      this.route("create");
+      this.route("edit", {
+          path: ':id'
+      });
+  });
+
+  this.route("tax", function() {
+      this.route("create");
+      this.route("edit", {
+          path: ':id'
+      });
+  });
+
+  this.route("freight", function() {
+      this.route("create");
+      this.route("edit", {
+          path: ':id'
+      });
+  });
+
+  this.route("invoice-number", function() {
+    this.route("edit");
+  });
 });
 
 export default Router;

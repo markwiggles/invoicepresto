@@ -1,37 +1,44 @@
 <div class="subjects">
-    <h3>Billers</h3>
+    <h3 class="text-primary">Billers</h3>
     <hr>
 
     <div class="row">
-
-    {{#link-to 'billers.create'}}
-    <button class="btn btn-primary">Add New</button>
-    {{/link-to}}
+        {{#link-to 'billers.create'}}
+            <button class="btn btn-primary">Add New</button>
+        {{/link-to}}
     </div>
 
     <div class="row">
 
-    <table class="table">
-        <thead>
-            <th width=45%>Name</th>
-            <th width=45%>Email</th>
-            <th width=10%></th>
-        </thead>
-        {{#each item in model}}                                                   
-            <tr>
-                <td>
-                    {{item.name}}
-                </td>
-                <td>
-                    {{item.email}}
-                </td>
-                <td>
-                    {{#link-to 'billers.edit' item}}{{fa-icon "edit"}}{{/link-to}}
-                </td>
-            </tr>
-        {{/each}}
-    </table>
+        <table class="table">
+            <thead>
+                <th width=4%>Select</th>
+                <th width=43%>Name</th>
+                <th width=43%>Email</th>
+                <th width=10%></th>
+            </thead>
+
+            {{#each item in model}}
+                {{#if item.id}}
+                    <tr>
+                        <td>
+                            {{radio-button value=item.id checked=selectedNumber}}
+                            <label>&nbsp;</label>
+                        </td>
+                        <td>
+                            {{item.name}}
+                        </td>
+                        <td>
+                            {{item.email}}
+                        </td>
+                        <td>
+                            {{#link-to 'billers.edit' item}}{{fa-icon "edit"}}{{/link-to}}
+                        </td>
+                    </tr>
+                {{/if}}
+            {{/each}}
+
+        </table>
 
     </div>
-
 </div>

@@ -11,7 +11,7 @@ export default function() {
     );
     this.transition(
         this.fromRoute('billers.index'),
-        this.toRoute('debtors'),
+        this.toRoute('debtors.index'),
         this.use('toLeft', {
             duration: 500
         }),
@@ -20,8 +20,8 @@ export default function() {
         })
     );
     this.transition(
-        this.fromRoute('debtors'),
-        this.toRoute('items'),
+        this.fromRoute('debtors.index'),
+        this.toRoute('items.index'),
         this.use('toLeft', {
             duration: 500
         }),
@@ -30,8 +30,8 @@ export default function() {
         })
     );
     this.transition(
-        this.fromRoute('items'),
-        this.toRoute('tax'),
+        this.fromRoute('items.index'),
+        this.toRoute('tax.index'),
         this.use('toLeft', {
             duration: 500
         }),
@@ -40,8 +40,8 @@ export default function() {
         })
     );
     this.transition(
-        this.fromRoute('tax'),
-        this.toRoute('freight'),
+        this.fromRoute('tax.index'),
+        this.toRoute('freight.index'),
         this.use('toLeft', {
             duration: 500
         }),
@@ -50,8 +50,8 @@ export default function() {
         })
     );
     this.transition(
-        this.fromRoute('freight'),
-        this.toRoute('bank-details'),
+        this.fromRoute('freight.index'),
+        this.toRoute('bank-details.index'),
         this.use('toLeft', {
             duration: 500
         }),

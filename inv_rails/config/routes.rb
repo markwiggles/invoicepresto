@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  resources :billers, only: :index
+
+
+  namespace :api do
+    resources :billers
+  end
+
+
 end

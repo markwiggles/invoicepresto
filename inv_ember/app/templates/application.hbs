@@ -7,31 +7,52 @@
                     <h3 class="text-primary">Invoice Presto</h3>
                 </li>
                 <li>
-                    {{#link-to 'index'}}{{fa-icon "home" size=1}}&nbsp; Home{{/link-to}}
+                    {{#link-to 'index'}}
+                        <span class="icon">{{fa-icon "home"}}</span><span class="link">Home</span>
+                    {{/link-to}}
                 </li>
                 <li>
-                    {{#link-to 'billers'}}{{fa-icon "usd" size=1}}&nbsp; Billers{{/link-to}}
+                    {{#link-to 'billers.index'}}
+                        <span class="icon">{{fa-icon "user"}}</span><span class="link">Billers</span>
+                    {{/link-to}}
                 </li>
                 <li>
-                    {{#link-to 'debtors'}}{{fa-icon "usd" size=1}}&nbsp; Debtors{{/link-to}}
+                    {{#link-to 'debtors.index'}}
+                        <span class="icon">{{fa-icon "group"}}</span><span class="link">Debtors</span>
+                    {{/link-to}}
                 </li>
                 <li>
-                    {{#link-to 'items'}}{{fa-icon "shopping-cart" size=1}}&nbsp; Items{{/link-to}}
+                    {{#link-to 'items'}}
+                        <span class="icon">{{fa-icon "shopping-cart"}}</span><span class="link">Items</span>
+                    {{/link-to}}
                 </li>
                 <li>
-                    {{#link-to 'tax'}}{{fa-icon "usd" size=1}}&nbsp; Tax{{/link-to}}
+                    {{#link-to 'tax'}}
+                        <span class="icon">{{fa-icon "usd"}}</span><span class="link">&nbsp;Tax</span>
+                    {{/link-to}}
                 </li>
                 <li>
-                    {{#link-to 'freight'}}{{fa-icon "truck" size=1}}&nbsp; Freight{{/link-to}}
+                    {{#link-to 'freight'}}
+                        <span class="icon">{{fa-icon "truck"}}</span><span class="link">Freight</span>
+                    {{/link-to}}
                 </li>
                 <li>
-                    {{#link-to 'bank-details'}}{{fa-icon "university" size=1}}&nbsp; Bank Details{{/link-to}}
+                    {{#link-to 'bank-details'}}
+                        <span class="icon">{{fa-icon "university"}}</span><span class="link">Bank Details</span>
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'invoice-number'}}
+                        <span class="icon">{{fa-icon "sort-numeric-asc"}}</span><span class="link">Invoice Number</span>
+                    {{/link-to}}
                 </li>
             </ul>
         </div>
 
         <div id="page-content-wrapper">
+
             {{liquid-outlet}}
+
         </div>
 
     </div>
