@@ -1,5 +1,5 @@
-import Ember from 'ember';                                                                                                                                                                    import DS from 'ember-data';
-
+                                                                                                                                                                   import DS from 'ember-data';
+import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
 var biller = DS.Model.extend(EmberValidations.Mixin, {
@@ -13,7 +13,6 @@ var biller = DS.Model.extend(EmberValidations.Mixin, {
 });
 
 // VALIDATIONS
-
 biller.reopen({
     validations: {
         name: {
@@ -23,7 +22,8 @@ biller.reopen({
             }
         },
         email: {
-            presence: true
+            presence: true,
+            format: /.+@.+\..{2,4}/
         }
     }
 });

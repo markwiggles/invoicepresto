@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('view:input-form', 'InputFormView');
+moduleFor('view:inputform', 'InputformView');
 
 // Replace this with your real tests.
 test('it exists', function() {

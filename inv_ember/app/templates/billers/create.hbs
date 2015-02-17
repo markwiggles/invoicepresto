@@ -7,9 +7,7 @@
         {{em-input property="email" placeholder="email"}} 
         {{em-input property="phone" placeholder="phone"}}
 
-        <p>VALID: {{isntValid}}</p>
-        <input {{bind-attr disabled=isntValid}} type="submit" class="btn btn-primary" value="Add New">
+        {{em-form-submit text="Add New" classes="btn btn-primary"}}
     {{/em-form}}
-
 
 </div>
