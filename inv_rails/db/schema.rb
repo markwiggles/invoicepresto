@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207104428) do
+ActiveRecord::Schema.define(version: 20150219223231) do
+
+  create_table "bank_details", force: :cascade do |t|
+    t.string   "name"
+    t.string   "account_number"
+    t.boolean  "selected",       default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
 
   create_table "billers", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +28,51 @@ ActiveRecord::Schema.define(version: 20150207104428) do
     t.boolean  "selected",   default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "debtors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.boolean  "selected",   default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "freights", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.float    "price"
+    t.boolean  "selected",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "invoice_numbers", force: :cascade do |t|
+    t.integer  "nextnum_int"
+    t.string   "nextnum_str"
+    t.boolean  "selected",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.float    "price"
+    t.integer  "taxcode"
+    t.boolean  "selected",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "taxes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.float    "percentage"
+    t.boolean  "selected",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end

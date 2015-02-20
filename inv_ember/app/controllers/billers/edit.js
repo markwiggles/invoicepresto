@@ -1,24 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+import EditingMixin from '../../mixins/editing';
 
-    actions: {
+export default Ember.Controller.extend(EditingMixin, {
 
-        submit: function() {
-        	var controller = this;
-            var biller = controller.get('model');
-            biller.save().then(function() {
-            	controller.transitionToRoute('billers');
-            });            
-        },
-
-        delete: function() {
-            var controller = this;
-            var biller = controller.get('model');
-            biller.destroyRecord().then(function() {
-            	controller.transitionToRoute('billers');
-            });
-        }
-    } //end actions
-
+   submitText: 'Save Changes'
 });

@@ -37,5 +37,4 @@ class Api::BillersController < ApplicationController
     biller.selected = params[:biller]['selected']
   end
 
-
 end
