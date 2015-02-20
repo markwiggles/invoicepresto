@@ -31,7 +31,7 @@ export default function() {
     );
     this.transition(
         this.fromRoute('items.index'),
-        this.toRoute('tax.index'),
+        this.toRoute('taxes.index'),
         this.use('toLeft', {
             duration: 500
         }),
@@ -40,8 +40,8 @@ export default function() {
         })
     );
     this.transition(
-        this.fromRoute('tax.index'),
-        this.toRoute('freight.index'),
+        this.fromRoute('taxes.index'),
+        this.toRoute('freights.index'),
         this.use('toLeft', {
             duration: 500
         }),
@@ -50,7 +50,7 @@ export default function() {
         })
     );
     this.transition(
-        this.fromRoute('freight.index'),
+        this.fromRoute('freights.index'),
         this.toRoute('bank-details.index'),
         this.use('toLeft', {
             duration: 500

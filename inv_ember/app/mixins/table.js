@@ -6,7 +6,7 @@ export default Ember.Mixin.create(ResourceMixin, {
 
     modelName: function() {
 
-        var resourcePaths = ['billers', 'debtors', 'items', 'bank-details', 'tax', 'freight', 'invoice-number'];
+        var resourcePaths = ['billers', 'debtors', 'items', 'bank-details', 'taxes', 'freights', 'invoice-numbers'];
         var models = ['biller', 'debtor', 'item', 'bank-detail', 'tax', 'freight', 'invoice-number'];
 
         //return the models-index of the current resource in the array
@@ -23,10 +23,11 @@ export default Ember.Mixin.create(ResourceMixin, {
     }.property(),
 
 
-    //set the radio button with the selection from the model
+    //On load, set the radio button with the selection from the model
     selectedNumber: function() {
         // loop through the model and find the selected id
         var selected;
+        var self = this;
         this.get('model').forEach(function(item) {
             if (item.get('selected') === true) {
                 selected = item.get('id');
@@ -37,7 +38,7 @@ export default Ember.Mixin.create(ResourceMixin, {
 
     }.property(),
 
-    // get the value of the selection on change and write to model
+    //On change, get the value of the selection and write to model
     getRadio: function() {
         var id = this.get('selectedNumber');
         var currentModel = this.get('resource').path;

@@ -1,0 +1,24 @@
+<div class="subjects">
+    <h3 class="text-primary">{{this.title}}</h3>
+    <hr>
+
+    {{#em-form model=model submit_button=false}}
+
+        {{!-- Select input elements, as specified in controller --}}
+
+        {{#each element in this.formElements}}
+            {{view element}}
+        {{/each}}
+
+        {{em-form-submit text=this.submitText classes="btn btn-primary"}}
+
+    {{/em-form}}
+
+
+    {{#if isEditing}}
+        <hr>
+        <br>
+        <button {{action delete}} class="btn btn-danger">Delete this Record</button>
+    {{/if}}
+
+</div>

@@ -1,4 +1,10 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+import EditingMixin from '../../mixins/editing';
+
+export default Ember.Controller.extend(EditingMixin, {
+
+   submitText: 'Save Changes',
+
+   formElements: ['name', 'description', 'price', 'taxcode']
 });

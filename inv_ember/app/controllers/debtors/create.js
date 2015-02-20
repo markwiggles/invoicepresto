@@ -1,17 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+import EditingMixin from '../../mixins/editing';
 
-    pageTitle: 'Debtors',
-    pageRoute: 'debtors.index',
+export default Ember.Controller.extend(EditingMixin, {
+
     submitText: 'Add New',
 
+    formElements: ['name', 'email', 'phone']
 
-    actions: {
-        submit: function() {
-            var item = this.get('model');
-            item.save();
-            this.transitionToRoute(this.pageRoute);
-        }
-    }
 });

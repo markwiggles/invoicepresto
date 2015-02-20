@@ -4,7 +4,8 @@ import EditingMixin from '../../mixins/editing';
 
 export default Ember.Controller.extend(EditingMixin, {
 
-    submitText: 'Save Changes',
+    submitText: 'Add New',
 
-    formElements: ['name', 'account_number']
+    formElements: ['name', 'description', 'price']
+
 });
