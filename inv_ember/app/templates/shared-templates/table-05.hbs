@@ -2,31 +2,35 @@
     <thead>
         <th width=4%>Select</th>
         <th width=43%>Name</th>
-        <th width=43%>Account Number</th>
+        <th width=43%>Description</th>
         <th width=10%></th>
     </thead>
 
     <tbody>
 
-        {{#each item in model}}
-            {{#if item.id}}
+        {{#each item in controller itemController="items/line"}}
+
+        {{!-- TODO: item checkbox to be assigned on load --}}
+
                 <tr>
                     <td>
-                        {{view 'form-elements/radio-button'}}
+                        {{input type="checkbox" name=item.id checked=item.selected}}
+                        <label>&nbsp;</label>
                     </td>
                     <td>
                         {{item.name}}
                     </td>
                     <td>
-                        {{item.account_number}}
+                        {{item.description}}
                     </td>
-                    <td>
+                    <td>                        
                         {{#link-to this.editLink item}}{{fa-icon "edit"}}{{/link-to}}
                     </td>
-                </tr>
-            {{/if}}
+                </tr> 
+
         {{/each}}
 
     </tbody>
 
 </table>
+

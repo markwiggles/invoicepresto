@@ -12,8 +12,7 @@
             {{#if item.id}}
                 <tr>
                     <td>
-                        {{radio-button value=item.id checked=selectedNumber}}
-                        <label>&nbsp;</label>
+                        {{view 'form-elements/radio-button'}}
                     </td>
                     <td>
                         {{item.name}}

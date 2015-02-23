@@ -49,7 +49,10 @@ Router.map(function() {
     });
 
     this.resource("invoice-numbers", function() {
-        this.route("edit");
+        this.route("create");
+        this.route("edit", {
+            path: ':id'
+        });
     });
 });
 

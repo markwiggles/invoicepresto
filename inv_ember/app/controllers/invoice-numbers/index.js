@@ -6,5 +6,5 @@ import RadioMixin from '../../mixins/radio';
 
 export default Ember.Controller.extend(TableMixin, RadioMixin, {
 
-	table: 'table-02'
+	table: 'table-04'
 });

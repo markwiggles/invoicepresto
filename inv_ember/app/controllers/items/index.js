@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 import TableMixin from '../../mixins/table';
 
-export default Ember.Controller.extend(TableMixin, {
+// import CheckboxMixin from '../../mixins/checkbox';
 
-	table: 'table-02'
+export default Ember.ArrayController.extend(TableMixin, {
+
+	table: 'table-05',
+
+	itemController: 'items/line'
 });

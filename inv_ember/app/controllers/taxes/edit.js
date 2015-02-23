@@ -6,5 +6,5 @@ export default Ember.Controller.extend(EditingMixin, {
 
    submitText: 'Save Changes',
 
-   formElements: ['name', 'description', 'percentage']
+   formElements: ['form-elements/name', 'form-elements/description', 'form-elements/percentage']
 });

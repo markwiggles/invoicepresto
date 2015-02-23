@@ -14,7 +14,6 @@ export default Ember.Mixin.create(ResourceMixin, {
             var controller = this;
             var item = controller.get('model');
             item.save().then(function() {
-                console.log('submiting');
                 controller.transitionToRoute(indexPath);
             });
         },
@@ -23,10 +22,16 @@ export default Ember.Mixin.create(ResourceMixin, {
             var indexPath = this.get('resource');
             var controller = this;
             var item = controller.get('model');
-            item.destroyRecord().then(function() {
-                console.log('deleting ' + indexPath);
+
+            if (confirm('ARE YOU SURE?' + ' - Deleting: ' + item.get('name'))) {
+                item.destroyRecord().then(function() {
+                    controller.transitionToRoute(indexPath);
+                });
+            } else {
                 controller.transitionToRoute(indexPath);
-            });
+            }
+
+
         }
     } //end actions
 

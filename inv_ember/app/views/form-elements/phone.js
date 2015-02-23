@@ -6,6 +6,8 @@ export default Ember.View.extend({
 
 	placeholder: 'Enter a phone number',
 
-	property: "phone"
+	property: "phone",
+
+	size: '50'
 
 });

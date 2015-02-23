@@ -8,6 +8,6 @@ export default Ember.Controller.extend(ResourceMixin,{
 
 	modelName: 'invoice-number',
 
-	formElements: ['nextnum-int', 'nextnum-str']
+	formElements: ['form-elements/nextnum-int', 'form-elements/nextnum-str']
 });
 
