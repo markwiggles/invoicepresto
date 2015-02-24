@@ -23,10 +23,10 @@ export default Ember.Mixin.create({
         var currentModel = this.get('resource').path;
 
         // set all selected as false
-        // this.get('model').forEach(function(item) {
-        //     item.set('selected', false);
-        //     item.save();
-        // });
+        this.get('model').forEach(function(item) {
+            item.set('selected', false);
+            item.save();
+        });
         // set the selected item and persist it
         this.store.find(this.get('modelName'), id).then(function(item) {
             item.set('selected', true);

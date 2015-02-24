@@ -8,5 +8,5 @@ export default Ember.ArrayController.extend(TableMixin, {
 
 	table: 'table-05',
 
-	itemController: 'items/line'
+	itemController: 'items/line-item'
 });

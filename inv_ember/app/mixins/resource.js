@@ -12,5 +12,4 @@ export default Ember.Mixin.create({
         return this.get('resource').charAt(0).toUpperCase() + this.get('resource').slice(1);
     }.property()
 
-
 });

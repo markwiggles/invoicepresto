@@ -3,25 +3,27 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend({
 
 
-    selected: function() {
+    updateSelected: function() {
 
-        var lineItems = this.get('model');
+        var items = this.store.find('item');
 
-        console.log(lineItems);
-
-        return lineItems;
+        console.log(items);
 
     }.on('init'),
+
+
+    selectedItem: undefined,
+
 
     watchSelected: function() {
 
         var self = this;
         //get the model for the selected item, change selected to true/false, and save changes
         this.store.find('item', self.get('id')).then(function(item) {
-            item.set('selected', self.get('selected'));
+            item.set('selected', self.get('selectedItem'));
             item.save();
         });
 
-    }.observes('selected')
+    }.observes('selectedItem')
 
 });

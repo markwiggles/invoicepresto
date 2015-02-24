@@ -8,13 +8,13 @@
 
     <tbody>
 
-        {{#each item in controller itemController="items/line"}}
+        {{#each item in controller itemController="items/line-item"}}
 
         {{!-- TODO: item checkbox to be assigned on load --}}
 
                 <tr>
                     <td>
-                        {{input type="checkbox" name=item.id checked=item.selected}}
+                        {{input type="checkbox" name=item.id checked=item.selectedItem}}
                         <label>&nbsp;</label>
                     </td>
                     <td>
