@@ -21,5 +21,13 @@ export default Ember.Mixin.create(ResourceMixin, {
     editLink: function() {
         return this.get('resource') + '.edit';
     }.property(),
+
+    editIntLink: function() {
+        return this.get('resource') + '.edit-int';
+    }.property(),
+
+    editStrLink: function() {
+        return this.get('resource') + '.edit-str';
+    }.property(),
     
 });
