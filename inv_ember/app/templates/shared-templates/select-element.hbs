@@ -1,2 +1,11 @@
-{{em-select property=view.property prompt=view.prompt content=view.content
-optionValuePath=view.optionValuePath optionLabelPath=view.optionLabelPath}}
+
+{{!-- FIX: taxcode select options populating and saving 
+--}}
+{{em-select 
+property=view.property 
+prompt=view.prompt 
+content=view.content 
+value=view.selectedValue 
+optionValuePath=view.optionValuePath 
+optionLabelPath=view.optionLabelPath
+}}

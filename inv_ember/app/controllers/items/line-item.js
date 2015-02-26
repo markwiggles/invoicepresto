@@ -2,18 +2,17 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
 
+    //FIX: item checkboxes populating on load
+
 
     updateSelected: function() {
 
         var items = this.store.find('item');
 
-        console.log(items);
-
     }.on('init'),
 
 
     selectedItem: undefined,
-
 
     watchSelected: function() {
 

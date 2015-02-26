@@ -2,7 +2,9 @@ import Ember from 'ember';
 
 import EditingMixin from '../../mixins/editing';
 
-export default Ember.Controller.extend(EditingMixin, {
+import SelectTaxMixin from '../../mixins/select-tax';
+
+export default Ember.Controller.extend(EditingMixin, SelectTaxMixin, {
 
    submitText: 'Save Changes',
 

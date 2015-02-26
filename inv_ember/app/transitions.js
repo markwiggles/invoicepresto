@@ -1,63 +1,61 @@
 export default function() {
     this.transition(
-        this.fromRoute('index'),
+        this.toRoute('index'),
+        this.use('toLeft', {
+            duration: 500
+        })
+    );
+
+    this.transition(
+        this.toRoute('billers.edit'),
+        this.use('toUp', {
+            duration: 500
+        })
+    );
+    this.transition(
         this.toRoute('billers.index'),
-        this.use('toLeft', {
-            duration: 500
-        }),
-        this.reverse('toRight', {
+        this.use('toRight', {
             duration: 500
         })
     );
-    this.transition(
-        this.fromRoute('billers.index'),
+        this.transition(
         this.toRoute('debtors.index'),
-        this.use('toLeft', {
-            duration: 500
-        }),
-        this.reverse('toRight', {
+        this.use('toRight', {
             duration: 500
         })
     );
     this.transition(
-        this.fromRoute('debtors.index'),
         this.toRoute('items.index'),
-        this.use('toLeft', {
-            duration: 500
-        }),
-        this.reverse('toRight', {
+        this.use('toRight', {
             duration: 500
         })
     );
     this.transition(
-        this.fromRoute('items.index'),
         this.toRoute('taxes.index'),
-        this.use('toLeft', {
-            duration: 500
-        }),
-        this.reverse('toRight', {
+        this.use('toRight', {
             duration: 500
         })
     );
     this.transition(
-        this.fromRoute('taxes.index'),
         this.toRoute('freights.index'),
-        this.use('toLeft', {
-            duration: 500
-        }),
-        this.reverse('toRight', {
+        this.use('toRight', {
             duration: 500
         })
     );
     this.transition(
-        this.fromRoute('freights.index'),
         this.toRoute('bank-details.index'),
-        this.use('toLeft', {
-            duration: 500
-        }),
-        this.reverse('toRight', {
+        this.use('toRight', {
             duration: 500
         })
     );
+        this.transition(
+        this.toRoute('invoice-numbers.index'),
+        this.use('toRight', {
+            duration: 500
+        })
+    );
+
+
+
 
 }

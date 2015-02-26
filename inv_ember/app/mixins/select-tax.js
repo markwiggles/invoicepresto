@@ -2,25 +2,39 @@ import Ember from 'ember';
 
 export default Ember.Mixin.create({
 
+
+    needs: ['taxes/index'],
+
+    taxes: function() {
+
+        var taxes = this.get('controllers.taxes').get('model');
+
+        return this.get('controllers.taxes');
+
+    }.property(),
+
+
     options: [],
 
     updateOptions: function() {
 
-        // TODO: select options to show on load
+        // FIX: taxcode select options populating and saving
 
         var self = this;
         var optionsArray = [];
 
-        this.store.find('tax').then(function(taxItems) {
-            taxItems.forEach(function(item) {
+        // this.get('taxes').then(function(taxItems) {
+        //     taxItems.forEach(function(item) {
 
-                optionsArray.push({
-                    id: item.get('id'),
-                    labelName: item.get('name') + ': ' + item.get('percentage') + '% - ' + item.get('description')
-                });
-            });
-            self.set('options', optionsArray);
-        });
+        //         console.log(item);
+
+        //         optionsArray.push({
+        //             id: item.get('id'),
+        //             labelName: item.get('name') + ': ' + item.get('percentage') + '% - ' + item.get('description')
+        //         });
+        //     });
+        //     self.set('options', optionsArray);
+        // });
 
     }.on('init')
 });
