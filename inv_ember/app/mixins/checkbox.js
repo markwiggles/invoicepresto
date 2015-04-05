@@ -9,17 +9,16 @@ export default Ember.Mixin.create({
     selectedCheckboxes: function() {
 
         // loop through the current and find the selected id
-        var selected = [];
-        var self = this;
+        // var selected = [];
+        // var self = this;
 
+        // this.get('model').forEach(function(item) {
+        //     if (item.get('selected') === true) {
+        //         selected = item.get('id');
+        //     }
+        // });
 
-        this.get('model').forEach(function(item) {
-            if (item.get('selected') === true) {
-                selected = item.get('id');
-            }
-        });
-
-        return selected;
+        // return selected;
 
     }.property(),
 

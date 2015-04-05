@@ -4,10 +4,14 @@ export default Ember.ObjectController.extend({
 
     //FIX: item checkboxes populating on load
 
+    lineItems: [],
+
 
     updateSelected: function() {
 
         var items = this.store.find('item');
+
+        this.set('lineItems', items);
 
     }.on('init'),
 

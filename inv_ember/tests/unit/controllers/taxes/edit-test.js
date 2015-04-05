@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:invoice-number/edit', 'InvoiceNumberEditController', {
+moduleFor('controller:taxes/edit', 'TaxesEditController', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

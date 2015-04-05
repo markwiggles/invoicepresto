@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
 
-
     //FIX: taxcode select options populating and saving
 
     property: 'taxcode',

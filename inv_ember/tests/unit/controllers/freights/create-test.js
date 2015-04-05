@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:freight/create', 'FreightCreateController', {
+moduleFor('controller:freights/create', 'FreightsCreateController', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
