@@ -1,4 +1,7 @@
 export default function() {
+
+    // TODO: finish/refactor transitions
+
     this.transition(
         this.toRoute('index'),
         this.use('toLeft', {
@@ -8,6 +11,12 @@ export default function() {
 
     this.transition(
         this.toRoute('billers.edit'),
+        this.use('toUp', {
+            duration: 500
+        })
+    );
+        this.transition(
+        this.toRoute('billers.create'),
         this.use('toUp', {
             duration: 500
         })

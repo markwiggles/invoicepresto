@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:tax/index', 'TaxIndexController', {
+moduleFor('controller:items/line-item', 'ItemsLineItemController', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
