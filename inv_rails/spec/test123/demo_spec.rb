@@ -7,17 +7,24 @@ require 'spec_helper'
 
 describe Demo do
 
-  it "test" do
+  context Demo do
+    its(:name) {should eq 'who'}
+  end
 
-  	demo = Demo.new(name: 'fred')
+  demo = Demo.new(name: 'fred')
 
-  	demo.name.should_not eq 'fred'
+  context 'creating objects' do
 
   	puts "NAME: #{demo.name}"
 
+    it 'check name' do
+
+      demo.name.should eq 'fred'
+    end
+
+    
+
   end
-
-
 
 
 end

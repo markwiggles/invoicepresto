@@ -9,10 +9,8 @@ describe Item do
     item3 = Item.new
 
     item1.should be_valid
-
     item1.save
     expect {item2.save}.to change {Item.count}.by(1)
-
     expect {item3.save!}.to raise_error(
       ActiveRecord::RecordInvalid
     )
@@ -25,6 +23,11 @@ describe Item do
 
   end
 
+  describe Item do
+
+    it {should respond_to :name, :description, :price, :selected }
+
+  end
 
 
 end

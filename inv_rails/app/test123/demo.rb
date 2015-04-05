@@ -3,7 +3,9 @@ class Demo
 
   attr_accessor :name
 
-  def initialize(name)
+  $NAME = 'who'
+
+  def initialize(name=$NAME)
 
     @name = name
 
